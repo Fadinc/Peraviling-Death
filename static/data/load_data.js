@@ -6,11 +6,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         const data = await response.json();
         
         const contentMap = {
+            'txt-concept': 'story_concept',
             'txt-story': 'story_annotation',
             'txt-tech': 'tech_description',
             'txt-abilities': 'abilities_intro',
             'txt-anatomy': 'anatomy_main',
-            'txt-manifestation': 'manifestation_details'
+            'txt-map': 'map_comment',
+            'txt-manifestation': 'manifestation_details',
+            'txt-character': 'character_descr'
         };
         
         // Универсальная замена контента

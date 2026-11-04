@@ -60,8 +60,7 @@
 .map-title { display: flex; justify-content: center;  margin-bottom: 0;}
 .map-description {
     background: rgba(20, 20, 20, 0.9); border-left: 3px solid #8b0000;
-    padding: 1.5rem; text-align: left; align-self: flex-start;            
-    flex: 1; min-width: 300px; max-width: 390px;;
+    padding: 1.5rem; text-align: left; align-self: flex-start; flex: 1;
 }
 .map { text-align: center; }
 .map_and_descr { display: flex; justify-content: space-between;}
