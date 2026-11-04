@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Преобладая смерть | ФИЛАТОВА 26М</title>
+
+    <link rel="stylesheet" href="static/styles/base.css">
+    <link rel="stylesheet" href="static/styles/ui.css">
+    <link rel="stylesheet" href="static/styles/styles.css">
+    <link rel="icon" type="image/png" href="static/pictures/logo.png">
+    
+    <script src="static/data/cookies.js" defer></script>
+    <script src="static/data/load_data.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-list">
+            <div class="logo-block">
+                <a href="" class="logo-link"><img src="static/pictures/logo.png" class="logo-icon"></a>
+                <a href="" class="main-page"><h3 class="main-title">Преобладая Смерть</h3></a>
+            </div>
+            <nav class="menu-block">
+                <a href="#story" class="menu-item"><h3>О книге</h3></a>
+                <a href="#tech" class="menu-item"><h3>Наука и технологии</h3></a>
+                <a href="#abilities" class="menu-item"><h3>Магия</h3></a>
+                <a href="#cases" class="menu-item"><h3>Герои</h3></a>
+                <button class="menu-item side-panel-trigger" id="keeps-trigger">
+                    <h3>Заметки ▾</h3>
+                </button>
+            </nav>
+
+            <div class="side-panel-overlay" id="side-panel-overlay"></div>
+            <aside class="side-panel" id="keeps-side-panel">
+                <button class="side-panel-close" id="side-panel-close">✕</button>
+                <nav class="side-panel-nav">
+                    <a href="#drafts" class="side-panel-link">Черновики</a>
+                    <a href="#bibliography" class="side-panel-link">Библиография</a>
+                </nav>
+            </aside>
+        </div>
+    </header>
+
+    <main>
+        <div class="video-overlay">
+            <div class="text-top-left">
+                <div class="title-wrapper" id="more-inf">
+                    <h1 class="red clickable-title">
+                        ПРЕОБЛАДАЯ<br>СМЕРТЬ<span class="info-icon">ⓘ</span>
+                    </h1>
+                    <div class="book-info-panel" id="book-info">
+                        <p class="map-description">
+                            <strong>Литературная концепция книги:</strong><br>
+                            Готический роман с многоуровневой инверсией ролей (сюжетный и психологический прием, при котором персонажи 
+                            меняются своими функциями, статусами или архетипами не единожды).<br>
+                            <br><strong>При попытке победить Смерть –</strong><br> 
+                            Вопрос не в том, может ли человек совершенно избавиться от смерти, а в том, что с ним происходит, 
+                            когда он решает, что имеет на это право. Фундаментальные законы – время, невозможность, предел – 
+                            перестраиваются под изменения, а вместе с ними перестраивается и человек, который этими законами был скроен.
+                            И тогда на стол падает пространство, где единственным ориентиром остаётся сам человек, а человек 
+                            без внешних границ – только точка, которая не знает, где верх, где низ и есть ли они в принципе.
+                        </p>
+                    </div>
+                </div>
+                <h3 class="video-description">
+                    То, что выглядит зафиксированным,<br>
+                    на самом деле собрано, удерживается и может быть ложным
+                </h3>
+            </div>
+
+            <video autoplay muted loop class="video-block">
+                <source src="static/video/video_2026-10-30_19-57-51.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+
+        <div class="champions-block">
+            <div class="lane-block" id="story">
+                <h3 class="lane-title red">АННОТАЦИЯ</h3>
+                <p class="lane-description anotation" id="txt-story">
+                    Никто не знает, почему одни люди рождаются с даром... (статический текст)
+                </p>
+            </div>
+
+            <div class="lane-block" id="tech">
+                <h3 class="lane-title red">НАУКА И ТЕХНОЛОГИИ</h3>
+                <p class="lane-description" id="txt-tech">
+                    Наука не понимает природу даров... (статический текст)
+                </p>
+                <div class="lane-champions-cards">
+                    <a class="champion-card" href="#space">
+                        <div class="champion-art">
+                            <img src="static/pictures/image/space.jpg">
+                            <h3 class="champion-name"></h3>
+                        </div>
+                    </a>
+                    <a class="champion-card" href="#camera">
+                        <div class="champion-art">
+                            <img src="static/pictures/image/eye.jpg">
+                            <h3 class="champion-name"></h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="lane-block" id="abilities">
+                <h3 class="lane-title red">КЛАССИФИКАЦИЯ И РАБОТА ДАРОВ</h3>
+                <p class="lane-description" id="txt-abilities">
+                    Дары не уникальны... (статический текст)
+                </p>
+
+                <div class="lane-champions-cards">
+                    <a class="champion-card" href="#psychic">
+                        <div class="champion-art">
+                            <img src="static/pictures//image/psychic.jpg">
+                            <h3 class="champion-name">Когнетивного искажения</h3>
+                        </div>
+                    </a>
+                    <a class="champion-card" href="#physical">
+                        <div class="champion-art">
+                            <img src="static/pictures/image/physical.jpg">
+                            <h3 class="champion-name">Соматический</h3>
+                        </div>
+                    </a>
+                    <a class="champion-card" href="#physical">
+                        <div class="champion-art">
+                            <img src="static/pictures/image/physical_item.jpg">
+                            <h3 class="champion-name">Вещественный</h3>
+                        </div>
+                    </a>
+                    <a class="champion-card" href="#infectious">
+                        <div class="champion-art">
+                            <img src="static/pictures/image/infectious.jpg">
+                            <h3 class="champion-name">Инфекционный</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <h1 class="map-title gray">АНATOMИЯ ДАРА</h1>
+            <div class="map-table">
+                <p class="lane-description map">
+                    Способность (дар) сам по себе представляется как некоторое новое понимание физических полей учёными.
+                    <br>Из науки известно, что человек обладает и постоянно излучает несколько типов физических полей
+                    <br>(Низкочастотное электрическое и магнитное поле; Радиоволны СВЧ; Инфракрасное излучение; Оптическое излучение)
+                    <br>У одарённых по-прежнему работает тот же принцип, но интенсивность того или иного поля возрастает до уровня
+                    <br>видимости невооружённым глазом (за исключением даров когнетивного и инферкционного проявления).
+                </p>
+
+                <div class="map_and_descr">
+                    <div class="anatomy-map">
+                        <div class="field-layer field-classic"></div>
+                        <div class="field-layer field-cognitive">
+                            <span class="field-label">Электромагнитное поле<br>(опр. энтропию)</span>
+                        </div>
+                        <div class="field-layer field-somatic">
+                            <span class="field-label">Соматическое/<br>вещественное поле</span>
+                        </div>
+                        <div class="field-layer field-viral">
+                            <span class="field-label">Внутренняя<br>система</span>
+                        </div>
+                        <div class="person"><img src="static/pictures/person.png"></div>
+                    </div>
+
+                    <p class="map-description">
+                        Дар — это лотерея. Не наследственность, не заслуга.<br>
+                        Чистая случайность, которую наука научилась сдерживать и не более.
+                    </p>
+                </div>
+            </div>
+
+            <p class="lane-description" id="txt-manifestation">
+                Проявление: при активации способности... (статический текст)
+            </p>
+
+            <div class="lane-block" id="cases">
+                <h3 class="lane-title red">ПРИМЕЧАТЕЛЬНЫЕ ЛИЧНОСТИ</h3>
+                <p class="lane-description">
+                    Когда мы смотрим на дерево глазами Смерти, то видим именно дерево — человека,<br>
+                    который попытался создать собственную систему координат, где он — центр, а остальные — переменные.
+                </p>
+                <div class="lane-champions-cards">
+                    <a class="champion-card" href="#orlov">
+                        <div class="champion-art">
+                            <img src="static/pictures/characters/dmitrii_orlov.jpg" alt="Дмитрий Орлов">
+                            <h3 class="champion-name">Орлов</h3>
+                        </div>
+                    </a>
+                    <a class="champion-card" href="#vyazemsky">
+                        <div class="champion-art">
+                            <img src="static/pictures/characters/victor_vyazemski.jpg" alt="Виктор Вяземский">
+                            <h3 class="champion-name">Вяземский</h3>
+                        </div>
+                    </a>
+                    <a class="champion-card" href="#veselovsky">
+                        <div class="champion-art">
+                            <img src="static/pictures/characters/andrei_veselovski.jpg" alt="Андрей Веселовский">
+                            <h3 class="champion-name">Веселовский</h3>
+                        </div>
+                    </a>
+                    <a class="champion-card" href="#soboleva">
+                        <div class="champion-art">
+                            <img src="static/pictures/characters/lidia_soboleva.jpg" alt="Лидия Соболева">
+                            <h3 class="champion-name">Соболева</h3>
+                        </div>
+                    </a>
+
+                    <a class="champion-card" href="#death">
+                        <div class="champion-art">
+                            <img src="static/pictures/image/death.jpg">
+                            <h3 class="champion-name">Смерть</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-list">
+            <div class="footer-list-link">
+                <img src="static/pictures/book.jpg" class="footer-ico">
+                <h5>Архив «Преобладая смерть»</h5>
+            </div>
+            <div class="footer-list-link"><h5>© 2026 𝔉𝔞𝔡𝔦𝔫𝔤 𝔏𝔦𝔪𝔢𝔫</h5></div>
+        </div>
+    </footer>
+</body>
+</html>

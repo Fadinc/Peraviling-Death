@@ -1,0 +1,88 @@
+/* Стили повторяющихся интерфейсных элементов: меню, карточек, боковой панели и оверлеев. */
+
+/* Пункты навигационного меню */
+.menu-item { color: #ffffff; cursor: pointer; transition: color 0.3s ease-in-out; }
+.menu-item:hover { color: #8b0000; }
+
+/* Кнопка-триггер боковой панели */
+.side-panel-trigger { 
+    background: none; border: none; 
+    padding: 0; margin: 0; display: flex; align-items: center; 
+    cursor: pointer; line-height: inherit;
+    font-family: inherit; font-size: 13px;  
+    transition: color 0.3s ease-in-out; 
+}
+.side-panel-trigger:hover h3 { color: #8b0000; }
+.side-panel-trigger h3 { margin: 0; font-weight: bold; color: #ffffff;}
+.side-panel-trigger:focus-visible { outline: 2px solid rgba(139, 0, 0, 0.5); outline-offset: 4px; }
+
+/* Карточки контента (герои, дары, технологии) */
+.champion-card { 
+    width: 250px; height: 350px; position: relative; 
+    background: #0a0a0a; border: 1px solid #222; overflow: hidden;
+     transition: transform 0.4s, border-color 0.4s, box-shadow 0.4s; 
+     text-decoration: none; 
+}
+.champion-card:hover { transform: scale(1.03); border-color: #8b0000; box-shadow: 0 0 30px rgba(139, 0, 0, 0.1); }
+.champion-art { width: 100%; height: 100%; position: relative; }
+.champion-art img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: filter 0.4s; }
+.champion-card:hover .champion-art img { filter: grayscale(0%); }
+.champion-name { 
+    position: absolute; bottom: 0; left: 0; width: 100%; 
+    padding: 2rem 1rem 1rem; margin: 0; 
+    background: linear-gradient(to top, #000, transparent); color: #fff; 
+    letter-spacing: 2px; text-transform: uppercase; 
+}
+
+/* Боковая панель «Заметки» и оверлей */
+.side-panel-overlay { 
+    position: fixed; inset: 0; 
+    background: rgba(0, 0, 0, 0.7); 
+    opacity: 0; visibility: hidden;
+    transition: all 0.4s ease; z-index: 1099; 
+}
+.side-panel-overlay.active { opacity: 1; visibility: visible; }
+.side-panel {
+    position: fixed; top: 0; right: 0; 
+    width: 380px; max-width: 90vw; height: 100vh; 
+    background-color: #0a0a0a; border-left: 2px solid #8b0000;
+    z-index: 1100; transform: translateX(100%); 
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    display: flex; flex-direction: column; 
+    padding: 3rem 2rem 2rem; overflow-y: auto; 
+}
+.side-panel.active { transform: translateX(0); }
+.side-panel-close { 
+    position: absolute; top: 1.5rem; right: 1.5rem; 
+    background: none; border: none; color: #666; 
+    font-size: 1.8rem; 
+    cursor: pointer; transition: color 0.3s; line-height: 1; 
+}
+.side-panel-close:hover { color: #fff; }
+.side-panel-title { 
+    color: #8b0000; 
+    font-size: 1.4rem; letter-spacing: 3px; text-transform: uppercase; 
+    margin-bottom: 3rem; border-bottom: 1px solid #333; padding-bottom: 1rem; 
+}
+.side-panel-nav { display: flex; flex-direction: column; gap: 0.5rem; }
+.side-panel-link { 
+    color: #aaa; 
+    font-size: 1.1rem; padding: 1rem 0; 
+    border-bottom: 1px solid #1a1a1a; 
+    transition: all 0.3s ease; 
+    display: flex; align-items: center; gap: 0.8rem; 
+}
+.side-panel-link::before { content: '—'; color: #444; transition: color 0.3s; }
+.side-panel-link:hover { color: #fff; padding-left: 1rem; }
+.side-panel-link:hover::before { color: #8b0000; }
+.side-panel-footer { 
+    margin-top: auto; padding-top: 2rem; 
+    color: #444; 
+    font-size: 0.85rem; font-style: italic; line-height: 1.6; 
+    border-top: 1px solid #222; 
+}
+body.panel-open { overflow: hidden; }
+
+/* Подвал сайта */
+footer { border-top: 1px solid #222; padding: 2rem; text-align: center; color: #444; }
+.footer-ico { width: 50px; height: 50px; }
