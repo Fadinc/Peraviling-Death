@@ -69,3 +69,39 @@ document.addEventListener('keydown', (e) => {
         closeModal();
     }
 });
+
+const infoModal = document.getElementById('info-modal');
+const infoImg = document.getElementById('info-modal-img');
+const infoTitle = document.getElementById('info-modal-title');
+const infoDesc = document.getElementById('info-modal-desc');
+
+// Открытие модалки с текстом
+function openInfoModal(imgSrc, title, description) {
+    if (!infoModal) return;
+    
+    infoImg.src = imgSrc;
+    infoTitle.textContent = title;
+    infoDesc.innerHTML = description; // Поддерживает <br> и <strong>
+    
+    infoModal.showModal();
+}
+
+// Закрытие модалки с текстом
+function closeInfoModal() {
+    if (!infoModal) return;
+    infoModal.close();
+    // Очистка после анимации закрытия
+    setTimeout(() => { 
+        infoImg.src = ''; 
+        infoTitle.textContent = ''; 
+        infoDesc.innerHTML = ''; 
+    }, 300);
+}
+
+// Закрытие по клику на фон (backdrop)
+infoModal.addEventListener('click', (e) => {
+    const rect = infoModal.getBoundingClientRect();
+    const isInDialog = (rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
+                      rect.left <= e.clientX && e.clientX <= rect.left + rect.width);
+    if (!isInDialog) closeInfoModal();
+});
