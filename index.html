@@ -12,6 +12,7 @@
     
     <script src="static/data/cookies.js" defer></script>
     <script src="static/data/load_data.js" defer></script>
+    <script src="static/data/functions.js" defer></script>
 </head>
 <body>
     <header>
@@ -80,19 +81,23 @@
                     Наука не понимает природу даров... (статический текст)
                 </p>
                 <div class="lane-champions-cards">
-                    <a class="champion-card" href="#space">
+                    <a class="champion-card" onclick="openModal('static/pictures/image/space.jpg')">
                         <div class="champion-art">
                             <img src="static/pictures/image/space.jpg">
                             <h3 class="champion-name"></h3>
                         </div>
                     </a>
-                    <a class="champion-card" href="#camera">
+                    <a class="champion-card" onclick="openModal('static/pictures/image/eye.jpg')">
                         <div class="champion-art">
                             <img src="static/pictures/image/eye.jpg">
                             <h3 class="champion-name"></h3>
                         </div>
                     </a>
                 </div>
+
+                <dialog id="image-modal" class="modal">
+                    <img id="modal-img" src="" alt="Увеличенное изображение">
+                </dialog>
             </div>
 
             <div class="lane-block" id="abilities">

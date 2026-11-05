@@ -22,6 +22,7 @@ function setCookie(name, value, options = {}) {
     document.cookie = updatedCookie;
 }
 
+//30 дней * 24 часа * 60 минут * 60 секунд * 1000 мс
 setCookie('user_consent', 'accepted', { 
-    expires: new Date(Date.now() + 86400 * 1000)
+    expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
 });

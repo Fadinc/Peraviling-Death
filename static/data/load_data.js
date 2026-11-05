@@ -24,45 +24,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
         
-        console.log('✅ Текстовый контент успешно загружен из JSON');
+        console.log('Текстовый контент успешно загружен из JSON');
         
     } catch (error) {
-        console.warn('⚠️ Не удалось загрузить JSON, используется статический HTML:', error.message);
-        // Fallback: ничего не делаем, остается текст из HTML
+        console.warn('Не удалось загрузить JSON, используется статический HTML:', error.message);
     }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const trigger = document.getElementById('keeps-trigger');
-    const panel = document.getElementById('keeps-side-panel');
-    const overlay = document.getElementById('side-panel-overlay');
-    const closeBtn = document.getElementById('side-panel-close');
-
-    function openPanel() {
-        panel.classList.add('active');
-        overlay.classList.add('active');
-        document.body.classList.add('panel-open');
-    }
-
-    function closePanel() {
-        panel.classList.remove('active');
-        overlay.classList.remove('active');
-        document.body.classList.remove('panel-open');
-    }
-
-    trigger.addEventListener('click', openPanel);
-    closeBtn.addEventListener('click', closePanel);
-    overlay.addEventListener('click', closePanel); // Закрытие по клику на затемнение
-
-    // Закрытие по Escape
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && panel.classList.contains('active')) {
-            closePanel();
-        }
-    });
-
-    // Закрытие при клике на ссылку внутри панели
-    panel.querySelectorAll('.side-panel-link').forEach(link => {
-        link.addEventListener('click', closePanel);
-    });
 });
